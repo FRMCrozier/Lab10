@@ -108,6 +108,11 @@
                </HBox.margin>
             </TextField>
             <Button fx:id="foundWow" mnemonicParsing="false" onAction="#FoundWow" text="Find" />
+            <Button fx:id="clearTable" mnemonicParsing="false" onAction="#ClearTable" prefHeight="26.0" prefWidth="101.0" text="CLEAR TABLE">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <Accordion />
