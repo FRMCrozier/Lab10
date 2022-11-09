@@ -340,6 +340,28 @@ public class HelloController {
     }
 
     /**
+     * Очистка таблицы
+     */
+    public void ClearTable(ActionEvent actionEvent) {
+        try
+        {
+            con = getConnection(Constants.URL, getProperties());
+            String query = "TRUNCATE TABLE wows;";
+            Statement stm = con.createStatement();
+            stm.execute(query);
+            LoadDT(actionEvent);
+            stm.close();
+            MessageBox(Alert.AlertType.INFORMATION, null, "Table is clear!");
+
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+            MessageBox(Alert.AlertType.WARNING, null, "Error!");
+        }
+    }
+
+    /**
      * Вспомогательный метод для вывода месседж боксов
      */
     private void MessageBox(Alert.AlertType type, String info, String message) {
@@ -349,4 +371,5 @@ public class HelloController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
 }
