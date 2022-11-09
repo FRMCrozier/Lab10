@@ -80,7 +80,7 @@
                   <Insets left="10.0" right="10.0" />
                </HBox.margin>
             </TextField>
-            <Button fx:id="foundID" mnemonicParsing="false" onAction="#FoundID" text="Found">
+            <Button fx:id="foundID" mnemonicParsing="false" onAction="#FoundID" text="Find">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
@@ -96,7 +96,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </TextField>
-            <Button fx:id="foundTitle" mnemonicParsing="false" onAction="#FoundTitle" text="Found" />
+            <Button fx:id="foundTitle" mnemonicParsing="false" onAction="#FoundTitle" text="Find" />
             <Label text="Total wows &gt; than">
                <HBox.margin>
                   <Insets left="30.0" right="10.0" />
@@ -107,7 +107,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </TextField>
-            <Button fx:id="foundWow" mnemonicParsing="false" onAction="#FoundWow" text="Found" />
+            <Button fx:id="foundWow" mnemonicParsing="false" onAction="#FoundWow" text="Find" />
          </children>
       </HBox>
       <Accordion />
