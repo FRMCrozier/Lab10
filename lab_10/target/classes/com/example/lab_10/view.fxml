@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="540.0" prefWidth="700.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_10.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="66.0" text="WOWS!">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+      <ButtonBar buttonMinWidth="60.0" maxWidth="300.0" minWidth="300.0" prefHeight="57.0" prefWidth="612.0">
+         <buttons>
+            <Button fx:id="connectDB" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="100.0" maxHeight="50.0" maxWidth="175.0" minHeight="36.0" minWidth="60.0" mnemonicParsing="false" onAction="#ConnectDB" prefHeight="37.0" prefWidth="175.0" text="Conect to DB" textAlignment="CENTER" textFill="#514545">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="downloadDB" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="175.0" minHeight="36.0" minWidth="60.0" mnemonicParsing="false" onAction="#DownloadDB" prefHeight="36.0" prefWidth="60.0" text="Download data" textFill="#3b3838">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </buttons>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </ButtonBar>
+      <ButtonBar buttonMinWidth="60.0" layoutX="210.0" layoutY="68.0" maxWidth="300.0" minWidth="300.0" prefHeight="57.0" prefWidth="612.0">
+         <buttons>
+            <Button fx:id="loadDT" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="100.0" maxHeight="50.0" maxWidth="175.0" minHeight="36.0" minWidth="60.0" mnemonicParsing="false" onAction="#LoadDT" prefHeight="37.0" prefWidth="175.0" text="Load Data" textAlignment="CENTER" textFill="#514545">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="exit" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" maxWidth="175.0" minHeight="36.0" minWidth="60.0" mnemonicParsing="false" onAction="#Exit" prefHeight="36.0" prefWidth="60.0" text="Exit" textFill="#3b3838">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </buttons>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </ButtonBar>
+
+        <Label layoutX="14.0" layoutY="18.0" text="Wows table:" />
+        <TableView id="tableWows" fx:id="tableWows" editable="true" prefHeight="300.0" prefWidth="1165.0">
+            <columns>
+                <TableColumn id="WowID" fx:id="WowID" prefWidth="50.0" text="WowID" />
+                <TableColumn id="Movie" fx:id="Movie" prefWidth="100.0" text="Movie" />
+                <TableColumn id="movieYear" fx:id="movieYear" prefWidth="50.0" text="Year" />
+                <TableColumn id="ReleaseDate" fx:id="ReleaseDate" prefWidth="100.0" text="Release Date" />
+                <TableColumn id="Director" fx:id="Director" prefWidth="100.0" text="Ditector" />
+                <TableColumn id="MovieCharacter" fx:id="MovieCharacter" prefWidth="100.0" text="Character" />
+                <TableColumn id="MovieDuration" fx:id="MovieDuration" prefWidth="100.0" text="Movie Duration" />
+                <TableColumn id="TimestampM" fx:id="TimestampM" prefWidth="70.0" text="Timestamp" />
+                <TableColumn id="FullLine" fx:id="FullLine" prefWidth="100.0" text="Full Line" />
+                <TableColumn id="CurrentWow" fx:id="CurrentWow" prefWidth="100.0" text="Current Wow" />
+                <TableColumn id="TotalWow" fx:id="TotalWow" prefWidth="100.0" text="Total Wows" />
+                <TableColumn id="Poster" fx:id="Poster" prefWidth="50.0" text="Poster" />
+                <TableColumn id="Video" fx:id="Video" prefWidth="50.0" text="Video" />
+                <TableColumn id="Audio" fx:id="Audio" prefWidth="50.0" text="Audio" />
+            </columns>
+        </TableView>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="ID:" />
+            <TextField fx:id="fieldID" alignment="CENTER" prefHeight="26.0" prefWidth="147.0">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="foundID" mnemonicParsing="false" onAction="#FoundID" text="Find">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="deleteID" mnemonicParsing="false" onAction="#DeleteID" text="Delete" />
+            <Label text="Movie title:">
+               <HBox.margin>
+                  <Insets left="50.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="fieldMovie" alignment="CENTER">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="foundTitle" mnemonicParsing="false" onAction="#FoundTitle" text="Find" />
+            <Label text="Total wows &gt; than">
+               <HBox.margin>
+                  <Insets left="30.0" right="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="fieldWow" alignment="CENTER">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="foundWow" mnemonicParsing="false" onAction="#FoundWow" text="Find" />
+            <Button fx:id="clearTable" mnemonicParsing="false" onAction="#ClearTable" prefHeight="26.0" prefWidth="101.0" text="CLEAR TABLE">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Accordion />
+    </children>
+</VBox>
